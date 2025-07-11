@@ -7,3 +7,5 @@ public class AppUser
     public required string Email { get; set; }
 
 }
+
+
