@@ -6,9 +6,7 @@ using Microsoft.EntityFrameworkCore;
 
 namespace API.Controllers
 {
-    [Route("api/[controller]")] //localhost:5001/api/loans
-    [ApiController]
-    public class LoansController(AppDbContext context) : ControllerBase
+    public class LoansController(AppDbContext context) : BaseApiController
     {
         [HttpGet]
         public async Task<ActionResult<IReadOnlyList<LoanModel>>> GetMembers()
