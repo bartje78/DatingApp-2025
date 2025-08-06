@@ -1,11 +1,13 @@
-// filepath: /Users/bartkoolhaas/Documents/Projects/DatingApp/client/src/main.ts
 import 'zone.js'; // Required for Angular
 import { bootstrapApplication } from '@angular/platform-browser';
 import { provideHttpClient, withFetch } from '@angular/common/http';
+import { provideRouter } from '@angular/router';
 import { App } from './app/app';
+import { routes } from './app/app.routes';
 
 bootstrapApplication(App, {
   providers: [
-    provideHttpClient(withFetch())
+    provideHttpClient(withFetch()),
+    provideRouter(routes) // Register the routes
   ]
 }).catch(err => console.error(err));
